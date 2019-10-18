@@ -1,0 +1,261 @@
+body{
+  height:100%;
+  overflow:hidden;
+  /*overflow:auto;*/
+}
+
+label{
+  display: inline;
+  margin-bottom: 0rem;
+}
+
+ol{
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+table, th, td{
+  text-align: center;
+}
+
+.sk-folding-cube {
+  top:45%;
+  margin: 20px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+.sk-folding-cube .sk-cube {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1); 
+}
+.sk-folding-cube .sk-cube:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #EEE5E5;
+  -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+          animation: sk-foldCubeAngle 2.4s infinite linear both;
+  -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 {
+  -webkit-transform: scale(1.1) rotateZ(90deg);
+          transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+  -webkit-transform: scale(1.1) rotateZ(180deg);
+          transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+  -webkit-transform: scale(1.1) rotateZ(270deg);
+          transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s; 
+}
+.sk-folding-cube .sk-cube4:before {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+  } 
+}
+
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+  }
+}
+
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: #000;
+  background-size: 60px 60px;
+  opacity: .8;
+  text-align:center;
+}
+
+.box-bronx{
+  width: 15px;
+  height: 15px;
+  background-color: #C562B0;/*#C60A9E;*/
+  border: 1px solid #fff;
+  margin-right: 10px;
+}
+.box-man{
+  width: 15px;
+  height: 15px;
+  background-color: #6274C5;/*#0A2DC6;*/
+  border: 1px solid #fff;
+  margin-right: 10px;
+}
+.box-que{
+  width: 15px;
+  height: 15px;
+  background-color: #9EC869;/*#74C60A;*/
+  border: 1px solid #fff;
+  margin-right: 10px;
+}
+.box-brok{
+  width: 15px;
+  height: 15px;
+  background-color: #E87E7E;/*#E63D3D;*/
+  border: 1px solid #fff;
+  margin-right: 10px;
+}
+.box-si{
+  width: 15px;
+  height: 15px;
+  background-color: #67C0C8;/*#0AB8C6;*/
+  border: 1px solid #fff;
+  margin-right: 10px;
+}
+
+.cardposition{
+  /*width: 20%;*/
+  right: 15px;
+  position: absolute !important;
+  top: 60px;
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+.convenciones{
+  padding-left: 20px;
+  width: 100%;
+}
+
+
+
+.sc{
+  background-color: #000;
+  /* width: 500px;
+  height: 500px;
+  border: 1px solid black;*/
+  margin: 100px;
+  padding: 0px;
+  position: absolute; 
+  top: 150px;
+  left: 150px;
+  opacity: 0;
+  top: -36px;
+  width: 0px;
+  height: 0px;
+}
+
+
+#textoCrimenes{
+  margin:0px;
+}
+
+#tableScroll {
+  height:40%;
+  margin-top:10px;
+  margin-bottom:10px;
+  overflow:auto;  
+}
+
+
+#googleMapContainer {
+  width: 100%;
+  height: 550px;
+}
+
+.linea {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+
+#barraDesplegable {
+  width: 50px;
+}
+
+.divPrincipal{
+  height:100%;
+}
+
+#distancia{
+  margin-left: 500px;
+  height:10px;
+  overflow:hidden;
+}
+
+#seguridad{
+  margin-left: 500px;
+  height:10px;
+  overflow:hidden;
+}
+
+#asequibilidad{
+  margin-left: 500px;
+  height:10px;
+  overflow:hidden;
+}
+
+#comparar{
+  margin-left: 500px;
+  height:10px;
+  overflow:hidden;
+}
+
+#barrios{
+  margin-left: 500px;
+  height:10px;
+  overflow:hidden;
+}
+
+.margenCero{
+  margin-left: 0px;
+}
+
+.arco path {
+  stroke: #fff;
+}
+

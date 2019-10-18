@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>NYU-HOME</title>
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet"/>
+  <!-- BootStrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <!-- Estilos CSS -->
+    <link rel="stylesheet" href="./css/main.css"/>
+  <!-- icono --> 
+  <!-- <link rel="shortcut icon" href="https://previews.dropbox.com/p/thumb/AAVxXxlk1EKzRJfZ2TK7s684vcZoPQ3tgByLmIWVhlm38Ivs8yF5ifb0jdH1VvYx_0eJPL99y2OJivSW3Pz3mTJQAILufgiZh9x0syDXtyfZod6WNIFULpi9EbBp49fEyUgRXheTmxq2f3wn65ILk0uoLz-DDpQvejjytZjzxaSYPKs1kc5-xkJ23_mUlebayfbdoHckZyBLYnFPi74KZDJpnq6jhhDGSsZL93evXBItkA/p.png?size_mode=5">--> 
+</head>
+<body onload="preCargarFunciones()">
+  <!--<div class="loader"><div class="lds-ripple"><div></div><div></div></div></div>-->
+  
+  <div class="loader">
+    <div id="msg1" style="top:40%;position: relative;">
+      <h5 style="color:#EEE5E5;">NYU-HOME helps you compare the New York Districts (by qualification from 0 to 50), so you can find the ideal district to live!</h5>
+    </div>
+    
+    <div class="sk-folding-cube">
+      <div class="sk-cube1 sk-cube"></div>
+      <div class="sk-cube2 sk-cube"></div>
+      <div class="sk-cube4 sk-cube"></div>
+      <div class="sk-cube3 sk-cube"></div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" style="cursor: default">
+        <img src="https://image.flaticon.com/icons/svg/579/579210.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+        NYU-HOME
+      </a>
+    </nav>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a id="marcador" class="nav-link" style="cursor: default">NYU Stern School of Business<span class="sr-only">(current)</span></a>
+        </li>
+
+        <!--
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Places of Interest</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Medical Care</a>
+            <a class="dropdown-item" href="#">Schools</a>
+            <a class="dropdown-item" href="#">Green Zones</a>
+            <a class="dropdown-item" href="#">Recreation</a>
+            <a class="dropdown-item" href="#">Gyms</a>
+          </div>
+        </li>
+        -->
+        
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid divPrincipal">
+    <div class="row">
+      <div id="barraDesplegable">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Distance">
+            <a class="nav-link active" id="distancia-tab" data-toggle="tab" href="#distancia" role="tab" aria-controls="distancia" aria-selected="true"><img src="https://image.flaticon.com/icons/svg/55/55212.svg" width="30" height="30" class="d-inline-block align-top" alt=""></a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Security">
+            <a class="nav-link" id="seguridad-tab" data-toggle="tab" href="#seguridad" role="tab" aria-controls="seguridad" aria-selected="false"><img src="https://image.flaticon.com/icons/svg/1161/1161490.svg" width="30" height="30" class="d-inline-block align-top" alt=""></a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Affordability">
+            <a class="nav-link" id="asequibilidad-tab" data-toggle="tab" href="#asequibilidad" role="tab" aria-controls="asequibilidad" aria-selected="false"><img src="https://image.flaticon.com/icons/svg/1017/1017527.svg" width="30" height="30" class="d-inline-block align-top" alt=""></a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Top 3">
+            <a class="nav-link" id="comparar-tab" data-toggle="tab" href="#comparar" role="tab" aria-controls="comparar" aria-selected="false"><img src="https://image.flaticon.com/icons/svg/858/858773.svg" width="30" height="30" class="d-inline-block align-top" alt=""></a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Districts and Neighborhoods">
+            <a class="nav-link" id="barrios-tab" data-toggle="tab" href="#barrios" role="tab" aria-controls="barrios" aria-selected="false"><img src="https://image.flaticon.com/icons/svg/1441/1441266.svg" width="30" height="30" class="d-inline-block align-top" alt=""></a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" id="volver-tab" data-toggle="tab" href="#volver" role="tab" aria-controls="volver" aria-selected="false"><img src="https://image.flaticon.com/icons/svg/60/60573.svg" width="30" height="30" class="d-inline-block align-top" alt=""></a>
+          </li>
+            
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          
+          <div class="tab-pane fade show active" id="distancia" role="tabpanel" aria-labelledby="distancia-tab">
+            <!-- Pestaña Distancia -->
+            <blockquote class="blockquote text-center">
+                <h3>Distance</h3>
+              </blockquote>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12" id="divGraficaDistancia" style="text-align:center;">
+                  <!-- Estadistica -->
+                  <!-- Aquí va el gráfico de Distancias -->
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <!-- Tabla -->
+                 <!-- <div id="tableWrapper">-->
+                    <div id="tableScroll">
+                      <table class="table table-striped table-hover table-sm" id="idTablaDistancia">
+                        <thead>
+                          <tr>
+                            <th colspan="5" id="tituloTablaDistancia"> Top 10 Distance to NYU </th> <!-- colspan - hace que ocupe dos columnas -->
+                          </tr>
+                          <tr>
+                            <th colspan="5" id="tituloTablaDistancia" class="text-info"><em>Click on a district to show you the route</em></th> <!-- colspan - hace que ocupe dos columnas -->
+                          </tr>
+                          <tr>
+                            <!-- <th id="th1"> N° </th> -->
+                            <th id="th2"> Name </th>
+                            <th id="th3"> District </th>
+                            <th id="th4"> Distance </th>
+                            <th id="th5"> Qualification </th>
+                          </tr>
+                        </thead>
+                          <tbody id="cuerpoTablaDistancia" style="cursor: pointer">
+
+                          </tbody>
+                      </table>
+                  </div>
+                  <button id="descargarTablaDistancia" class="btn btn-primary btn-block btn-sm"> Download Table (.csv) </button>
+                 <!-- </div>-->
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+          <!-- Pestaña Seguridad -->
+          <div class="tab-pane fade" id="seguridad" role="tabpanel" aria-labelledby="seguridad-tab">
+            <blockquote class="blockquote text-center">
+              <h3>Security (Number of Crimes)</h3>
+            </blockquote>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12" id="divGraficaSeguridad" style="text-align:center;">
+                  <!-- Estadistica -->
+                  <!-- Aquí va el gráfico de Distancias -->
+                </div>
+                </p><pre id="textoCrimenes">District:      Number of Crimes:</pre>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                 <!-- <div id="tableWrapper"> -->
+                    <div id="tableScroll" style="height:40%;">
+                      <table class="table table-striped table-hover table-sm">
+                        <thead>
+                          <tr>
+                            <th colspan="4" id="tituloTabla"> Top 10 Security in NY </th> <!-- colspan - hace que ocupe dos columnas -->
+                          </tr>
+                          <tr>
+                            <!--<th id="th1"> N° </th> -->
+                            <th id="th2"> Borough </th>
+                            <th id="th3"> District </th>
+                            <th id="th4"> # Crimes </th>
+                            <th id="th5"> Qualification </th>
+                          </tr>
+                        </thead>
+                        <tbody id="cuerpoTablaCrimenes">
+
+                        </tbody>
+
+                      </table>
+                    </div>
+                  <!--<button id="marcarCrimenes" class="btn btn-primary btn-block btn-sm"> (View / Hide) All Crimes </button>-->
+                  <button id="descargarTablaSeguridad" class="btn btn-primary btn-block btn-sm"> Download Table (.csv) </button>
+                  <!--</div>-->
+                </div>
+              </div>
+            </div>            
+          </div>
+          
+          <!-- Pestaña Asequibilidad -->
+          <div class="tab-pane fade" id="asequibilidad" role="tabpanel" aria-labelledby="asequibilidad-tab">
+            <blockquote class="blockquote text-center">
+              <h3>Affordability</h3>
+            </blockquote>
+
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12" id="divGraficaAsequibilidad" style="text-align:center;">
+                  <!-- Estadistica -->
+                  <!-- Aquí va el gráfico de Distancias -->
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+
+                  <!--<div id="tableWrapper">-->
+                    <div id="tableScroll" style="height:40%;">
+                      <table class="table table-striped table-hover table-sm">
+                        <thead>
+                          <tr>
+                            <th colspan="4" id="tituloTabla"> Top 10 Housings in NY </th> <!-- colspan - hace que ocupe dos columnas -->
+                          </tr>
+                          <tr>
+                            <!-- <th id="th1"> N° </th> -->
+                            <th id="th2"> Borough </th>
+                            <th id="th3"> District </th>
+                            <th id="th4"> # Housings </th>
+                            <th id="th5"> Qualification </th>
+                          </tr>
+                        </thead>
+                        <tbody id="cuerpoTablaHospedajes">
+
+                        </tbody>
+
+                      </table>
+                    </div>
+                  <!--</div>-->
+                    <!--<button id="marcarHospedajes" class="btn btn-primary btn-block btn-sm"> (View / Hide) All Housings</button>-->
+                    <button id="descargarTablaAsequibilidad" class="btn btn-primary btn-block btn-sm"> Download Table (.csv) </button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          
+          <!-- Pestaña Comparar -->
+          <div class="tab-pane fade" id="comparar" role="tabpanel" aria-labelledby="comparar-tab">
+            <blockquote class="blockquote text-center">
+              <h3>Top 3 of NY Districts</h3>
+            </blockquote>
+            
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12" id="divGraficaComparar" style="text-align:center;">
+                  <!-- Estadistica -->
+                  <!-- Aquí va el gráfico de Distancias -->
+                </div>
+                <div class="text-center" id="botonesComparar" style="width: 100%;"></div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <!-- Tabla -->
+                  <!--<div id="tableWrapper">-->
+                    <div id="tableScroll" style="height:78%;">
+                      <table class="table table-striped table-hover table-sm" id="idTablaComparar">
+                        <thead>
+                          <tr>
+                            <th colspan="5" id="tituloTablaComparar">Ranking Best District </th>  <!-- colspan - hace que ocupe dos columnas -->
+                          </tr>
+                          <tr>
+                            <!-- <th id="th1"> N° </th> -->
+                            <th id="th2"> Name </th>
+                            <th id="th3"> District </th>
+                            <th id="th3"> Qualification </th>
+                          </tr>
+                        </thead>
+                        <tbody id="cuerpoTablaComparar">
+
+                        </tbody>
+                      </table>
+                    </div>
+                  <button id="descargarTablaComparar" class="btn btn-primary btn-block btn-sm"> Download Table (.csv) </button>
+                  <!--</div>-->
+                </div>
+              </div>
+            </div>           
+          </div>
+          
+          <!-- Pestaña Barrios -->
+          <div class="tab-pane fade" id="barrios" role="tabpanel" aria-labelledby="barrios-tab">
+          
+            <blockquote class="blockquote text-center">
+              <h3>Districts and Neighborhoods</h3>
+            </blockquote>  
+            
+            <div class="container-fluid">
+              <div class="row tablaDistritos">
+                <div class="col-md-12">
+                  <!--<div id="tableWrapper">-->                 
+                  <div id="tableScroll" style="height:10%;">
+                    <table class="table table-striped table-hover table-sm">
+                      <thead>
+                        <tr>
+                          <th colspan="3" id="tituloTabla"> Districts of NY </th> <!-- colspan - hace que ocupe dos columnas -->
+                        </tr>
+                        <tr>
+                          <th id="th1"> N° </th>
+                          <th id="th2"> Name </th>
+                          <th id="th3"> Final Qualification </th>
+                        </tr>
+                      </thead>
+                      <tbody id="mainTableBody2">
+
+                      </tbody>
+
+                    </table>
+                  </div>
+                  
+                   <button id="descargarTablaDistritos" class="btn btn-primary btn-block btn-sm"> Download Table Districts(.csv) </button>
+                  <!--</div>-->
+                  <!--<button id="marcarBarrios" class="btn btn-primary btn-block btn-sm"> See / Hide on the Map </button>-->
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-12">
+                  <!--<div id="tableWrapper">-->                 
+                  <div id="tableScroll" style="height:2%;">
+                    <table class="table table-striped table-hover table-sm">
+                      <thead>
+                        <tr>
+                          <th colspan="3" id="tituloTabla"> Neighborhoods of NY </th> <!-- colspan - hace que ocupe dos columnas -->
+                        </tr>
+                        <tr>
+                          <th id="th1"> N° </th>
+                          <th id="th2"> Name </th>
+                          <th id="th3"> Borough </th>
+                        </tr>
+                      </thead>
+                      <tbody id="mainTableBody">
+
+                      </tbody>
+
+                    </table>
+                  </div>
+                  <!--</div>-->
+                  <!--<button id="marcarBarrios" class="btn btn-primary btn-block btn-sm"> See / Hide on the Map </button>-->
+                </div>
+              </div>
+            </div>
+          </div>
+            
+        </div>
+      </div>
+      <div id="divMapa" class="col">    
+        <div id="googleMapContainer">
+        </div>
+        
+        <div id="sc" class="sc"></div>  
+          <div class="card horizontal cardposition scale-transition" id="thecard">
+            <!--<div class="card-stacked">
+              <div class="card-content">-->
+            <ol class="breadcrumb text-center">
+              <h5>Conventions</h5>
+              <div class="convenciones text-center">
+                
+                <div class="row align-items-center">
+                  <div class="box-bronx"></div>
+                  <label> Bronx </label>
+                </div>
+                <div class="row align-items-center">
+                  <div class="box-brok"></div>
+                  <label> Brooklyn </label>
+                </div>
+                <div class="row align-items-center">
+                  <div class="box-man"></div>
+                  <label> Manhattan </label>
+                </div>
+                <div class="row align-items-center">
+                  <div class="box-que"></div>
+                  <label> Queens </label>
+                </div>
+                <div class="row align-items-center">
+                  <div class="box-si"></div>
+                  <label> Staten Island </label>
+                </div>
+              </div>  
+            </ol>
+            
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="checkCrimenes" onclick="marcarCrimenes()">
+                <label class="custom-control-label" for="checkCrimenes">
+                  See all crimes 
+                  <img src="https://www.shareicon.net/data/128x128/2015/06/19/56419_red_32x32.png">
+                </label>
+                </div>
+              
+              <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="checkHospedajes" onclick="marcarHospedajes()">
+                <label class="custom-control-label" for="checkHospedajes">
+                  See all housings
+                    <img src="https://www.shareicon.net/data/32x32/2015/06/19/56421_yellow_32x32.png">
+                </label>
+                </div>
+                
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="checkBarrios" onclick="btnMarcarBarrios()">
+                  <label class="custom-control-label" for="checkBarrios">
+                      See all neighborhoods
+                    <img src="https://www.shareicon.net/data/128x128/2015/06/19/56414_blue_32x32.png">
+                      </label>
+                </div>
+                    
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="checkWF" onclick="marcarWF()">
+                   <label class="custom-control-label" for="checkWF">
+                     See Wi-Fi Hotspot Locations
+                     <img src="https://www.shareicon.net/data/128x128/2015/04/27/29394_wifi_32x37.png">
+                       </label>
+                 </div>
+                        
+                 <div class="custom-control custom-checkbox">
+                   <input type="checkbox" class="custom-control-input" id="checkFM" onclick="marcarFM()">
+                     <label class="custom-control-label" for="checkFM">
+                       See Farmers Markets
+                       <img src="https://www.shareicon.net/data/128x128/2015/04/26/29163_flower_32x37.png">
+                         </label>
+                 </div>
+                        
+                 <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="checkArt" onclick="marcarArt()">
+                      <label class="custom-control-label" for="checkArt">
+                           See Art Galleries
+                        <img src="https://www.shareicon.net/data/128x128/2015/04/26/29238_museum_32x37.png">
+                      </label>
+                  </div>   
+                    
+                <div class="custom-control custom-checkbox">
+                 <input type="checkbox" class="custom-control-input" id="checkMuseos" onclick="marcarMuseos()">
+                   <label class="custom-control-label" for="checkMuseos">
+                        See Museums
+                     <img src="https://www.shareicon.net/data/128x128/2015/04/26/29207_court_32x37.png">
+                   </label>
+                 </div>
+                   
+                <div class="custom-control custom-checkbox">
+                 <input type="checkbox" class="custom-control-input" id="checkLB" onclick="marcarLB()">
+                   <label class="custom-control-label" for="checkLB">
+                        See Libraries
+                     <img src="https://www.shareicon.net/data/128x128/2015/04/26/29216_books_32x37.png">
+                   </label>
+                 </div>   
+                            
+              <!--</div>
+            </div>-->
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+            <!-- Jquery -->
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+            <!-- JavaScript -->
+            <script type="text/javascript" src="./js/map.js"></script>
+            <script type="text/javascript" src="./js/main.js"></script>
+            <script type="text/javascript" src="./js/visualization.js"></script>
+            <!-- D3.js -->
+            <script src="https://d3js.org/d3.v4.min.js"></script>
+            <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+            <!--<script src="https://d3js.org/d3.v5.min.js"></script> -->
+            <!-- Google Maps -->
+            
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6YeNUtrmSRloKw8YGyh7SNLyjxdtD52w&callback=onGoogleMapResponse"></script>
+
+            <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+            <!-- BootStrap -->            
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+                        
+</body>
+</html>
