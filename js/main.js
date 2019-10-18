@@ -1139,13 +1139,7 @@ function obtenerCentrosYdistancias() {
         var bounds = new google.maps.LatLngBounds();
         if(feat[i].g.g.length == 1){
           for (k = 0; k < feat[i].g.g[0].g.length; k++) {
-            var pos = new google.maps.LatLng(40.7291, -73.9965);
-            bounds.extend(pos);
-            if(bounds.contains(pos)){
-              console.log('siiii');
-            }else{
-              console.log('noooo')
-            }
+            bounds.extend(feat[i].g.g[0].g[k]);
           }
         }else {
           for (var u = 0; u < feat[i].g.g.length; u++) {
